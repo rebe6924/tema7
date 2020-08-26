@@ -1,0 +1,55 @@
+<!----
+
+Lav en ny udganve af areal-programmet. Programet skal bede brugeren angive en længde og en bredde ved hjælp af inputfelter. Ved klik på en knap skal programmet udregne arealet, og give brugeren reslutatet efter formen:
+
+Længde: 5 meter, bredde: 7 meter, areal: 35 meter (længde*bredde)
+
+---->
+
+
+
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic JavaScript</title>
+</head>
+
+<body>
+
+    <p>Hvad er længden?</p>
+    <input type="text" id="længde">
+    <p>Hvad er bredden?</p>
+    <input type="text" id="bredde">
+    <button>Klik og beregn arealet, kig i konsollen</button>
+
+
+    <script>
+        document.querySelector("button").addEventListener("click", buttonClicked);
+
+        function buttonClicked() {
+            let længde = document.querySelector("#længde").value;
+            let bredde = document.querySelector("#bredde").value;
+            let areal = længde * bredde;
+            let resultat = `Længden er ${længde} meter og bredden er ${bredde} meter. Arealet er ${areal}`;
+            console.log(resultat);
+
+        }
+
+
+
+        /*
+        let længde = 31;
+        let bredde = 25;
+        let areal = længde * bredde;
+        let resultat = `Længden er ${længde} meter og bredden er ${bredde} meter. Arealet er ${areal}` ;
+        console.log(resultat);
+        */
+
+    </script>
+
+</body>
+
+</html>
